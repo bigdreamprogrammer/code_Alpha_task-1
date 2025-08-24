@@ -1,0 +1,49 @@
+
+.main_content_pay{
+    width: 850px;
+    margin: auto;
+    margin-top: 10%;
+    background-color: rgb(243, 238, 231);
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid rgb(182, 182, 182);
+}
+.billing{
+    width: 50%;
+    height: 100%;
+    padding: 1rem;
+}
+.payment{
+    width: 50%;
+    height: 100%;
+    padding: 1rem;
+}
+#card{
+    display: flex;
+}
+.img{
+    width: 80px;
+    height: 40px;
+    border: 1px solid rgb(163, 162, 162);
+}
+#size{
+    width: 79px;
+    height: 38px;
+}
+#pay_btn{
+    width: 100%;
+}
+
+@media (max-width:750px){
+    .main_content_pay{
+        width: 100%;
+        display: block;
+    }
+    .billing{
+        width: 100%;
+    }
+    .payment{
+        width: 100%;
+    }
+
+}

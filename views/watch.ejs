@@ -1,0 +1,588 @@
+<%- include("includes/header.ejs") %> <!-- Header part -->
+<head>
+    <style>
+        .Laptop{display: none;}
+        .Computer{display: none;}
+        .Speaker{display: none;}
+        .Drone{display: none;}
+        .Phone{display: none;}
+        .Headphone{display: none;}
+        .Tablet{display: none;}
+        .Cooler{display: none;}
+        .Washing{display: none;}
+        .TV{display: none;}
+    </style>
+</head>
+<div class="Main_part">
+    <div class="filter">
+            <h4>Browse By</h4>
+            <hr>
+            <div class="filter_part">
+                <ul>
+                    <li id="all_f"><a href="#">All Products</a></li>
+                    <li id="computer_f"><a href="#">Computers</a></li>
+                    <li id="drone_f"><a href="#">Drones & Cameras</a></li>
+                    <li id="headphone_f"><a href="#">Headphones</a></li>
+                    <li id="mobile_f"><a href="#">Mobile</a></li>
+                    <li id="laptop_f"><a href="#">Laptop</a></li>
+                    <li id="speaker_f"><a href="#">Bluetooth Speaker</a></li>
+                    <li id="tablet_f"><a href="#">Tablet</a></li>
+                    <li id="tv_f"><a href="#">Smart LED TV</a></li>
+                    <li id="watch_f"><a href="#">Smart Watch</a></li>
+                    <li id="cooler_f"><a href="#">Cooler</a></li>
+                    <li id="washin_f"><a href="#">Washing Machine</a></li>
+                </ul>
+            </div>
+    </div>
+    <div class="all_view">
+        <div><h1 id="view_title">Smart Watch</h1></div>
+        <div class="items">
+            <div class="data_item Phone">
+                <a href="/show/<%= more_data[7]._id%>">
+                <div class="img_data"><img src="<%= more_data[7].image %>" id="data_item_img"></div>
+                <p>OnePlus Android Phone</p>
+                <p>From &#8377; <%= more_data[7].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Laptop">
+                <a href="/show/<%= more_data[2]._id%>">
+                <div class="img_data"><img src="<%= more_data[2].image %>" id="data_item_img"></div>
+                <p>Hp Laptop core i5 Gen 12th</p>
+                <p>From &#8377; <%= more_data[2].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Drone">
+                <a href="/show/<%= more_data[45]._id%>">
+                <div class="img_data"><img src="<%= more_data[45].image %>" id="data_item_img"></div>
+                <p>High Quality Drone & Cameras</p>
+                <p>From &#8377; <%= more_data[45].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Watch">
+                <a href="/show/<%= more_data[15]._id%>">
+                <div class="img_data"><img src="<%= more_data[15].image %>" id="data_item_img"></div>
+                <p>Smart Android Watch</p>
+                <p>From &#8377; <%= more_data[15].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Speaker">
+                <a href="/show/<%= more_data[28]._id%>">
+                <div class="img_data"><img src="<%= more_data[28].image %>" id="data_item_img"></div>
+                <p>Boat Bluetooth Speaker</p>
+                <p>From &#8377; <%= more_data[28].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item TV">
+                <a href="/show/<%= more_data[22]._id%>">
+                <div class="img_data"><img src="<%= more_data[22].image %>" id="data_item_img"></div>
+                <p>Samsung Android T.V</p>
+                <p>From &#8377; <%= more_data[22].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Watch">
+                <a href="/show/<%= more_data[20]._id%>">
+                <div class="img_data"><img src="<%= more_data[20].image %>" id="data_item_img"></div>
+                <p>LED Smart Watch</p>
+                <p>From &#8377; <%= more_data[20].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Cooler">
+                <a href="/show/<%= more_data[51]._id%>">
+                <div class="img_data"><img src="<%= more_data[51].image %>" id="data_item_img"></div>
+                <p>Cooler Babaj</p>
+                <p>From &#8377; <%= more_data[51].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+        
+            <div class="data_item Phone">
+                <a href="/show/<%= more_data[8]._id%>">
+                <div class="img_data"><img src="<%= more_data[8].image %>" id="data_item_img"></div>
+                <p>Samsung Android Phone</p>
+                <p>From &#8377; <%= more_data[8].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Washing">
+                <a href="/show/<%= more_data[56]._id%>">
+                <div class="img_data"><img src="<%= more_data[56].image %>" id="data_item_img"></div>
+                <p>Smart Washing machine</p>
+                <p>From &#8377; <%= more_data[56].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Speaker">
+                <a href="/show/<%= more_data[29]._id%>">
+                <div class="img_data"><img src="<%= more_data[29].image %>" id="data_item_img"></div>
+                <p>JBL Bluetooth Speaker</p>
+                <p>From &#8377; <%= more_data[29].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            <div class="data_item Laptop">
+                <a href="/show/<%= more_data[4]._id%>">
+                <div class="img_data"><img src="<%= more_data[4].image %>" id="data_item_img"></div>
+                <p>Asus core i5 Laptop</p>
+                <p>From &#8377; <%= more_data[4].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Phone">
+                <a href="/show/<%= more_data[9]._id%>">
+                <div class="img_data"><img src="<%= more_data[9].image %>" id="data_item_img"></div>
+                <p>Apple New  iPhone</p>
+                <p>From &#8377; <%= more_data[9].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+    
+            <div class="data_item Watch">
+                <a href="/show/<%= more_data[14]._id%>">
+                <div class="img_data"><img src="<%= more_data[14].image %>" id="data_item_img"></div>
+                <p>REDMI Smart Watch</p>
+                <p>From &#8377; <%= more_data[14].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item TV">
+                <a href="/show/<%= more_data[21]._id%>">
+                <div class="img_data"><img src="<%= more_data[21].image %>" id="data_item_img"></div>
+                <p>Mi Smart Android T.V</p>
+                <p>From &#8377; <%= more_data[21].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Watch">
+                <a href="/show/<%= more_data[16]._id%>">
+                <div class="img_data"><img src="<%= more_data[16].image %>" id="data_item_img"></div>
+                <p>Smart LED Android Watch</p>
+                <p>From &#8377; <%= more_data[16].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Phone">
+                <a href="/show/<%= more_data[10]._id%>">
+                <div class="img_data"><img src="<%= more_data[10].image %>" id="data_item_img"></div>
+                <p>motorola Android Phone</p>
+                <p>From &#8377; <%= more_data[10].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Speaker">
+                <a href="/show/<%= more_data[31]._id%>">
+                <div class="img_data"><img src="<%= more_data[31].image %>" id="data_item_img"></div>
+                <p>Mi Bluetooth Speaker</p>
+                <p>From &#8377; <%= more_data[31].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item TV">
+                <a href="/show/<%= more_data[23]._id%>">
+                <div class="img_data"><img src="<%= more_data[23].image %>" id="data_item_img"></div>
+                <p>Mi Smart Android T.V</p>
+                <p>From &#8377; <%= more_data[23].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Phone">
+                <a href="/show/<%= more_data[11]._id%>">
+                <div class="img_data"><img src="<%= more_data[11].image %>" id="data_item_img"></div>
+                <p>Oppo Android Phone</p>
+                <p>From &#8377; <%= more_data[11].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Laptop">
+                <a href="/show/<%= more_data[3]._id%>">
+                <div class="img_data"><img src="<%= more_data[3].image %>" id="data_item_img"></div>
+                <p>Lanovo 12th Gen core i5</p>
+                <p>From &#8377; <%= more_data[3].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Speaker">
+                <a href="/show/<%= more_data[33]._id%>">
+                <div class="img_data"><img src="<%= more_data[33].image %>" id="data_item_img"></div>
+                <p>MIVI Bluetooth Speaker</p>
+                <p>From &#8377; <%= more_data[33].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Watch">
+                <a href="/show/<%= more_data[18]._id%>">
+                <div class="img_data"><img src="<%= more_data[18].image %>" id="data_item_img"></div>
+                <p>LED Lighting Watch</p>
+                <p>From &#8377; <%= more_data[18].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Phone">
+                <a href="/show/<%= more_data[12]._id%>">
+                <div class="img_data"><img src="<%= more_data[12].image %>" id="data_item_img"></div>
+                <p>Redmi Android Phone</p>
+                <p>From &#8377; <%= more_data[13].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item TV">
+                <a href="/show/<%= more_data[24]._id%>">
+                <div class="img_data"><img src="<%= more_data[24].image %>" id="data_item_img"></div>
+                <p>LG Smart Android T.V</p>
+                <p>From &#8377; <%= more_data[24].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Drone">
+                <a href="/show/<%= more_data[49]._id%>">
+                <div class="img_data"><img src="<%= more_data[49].image %>" id="data_item_img"></div>
+                <p>High Quality Drone & Cameras</p>
+                <p>From &#8377; <%= more_data[49].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+    
+            <div class="data_item Phone">
+                <a href="/show/<%= more_data[13]._id%>">
+                <div class="img_data"><img src="<%= more_data[13].image %>" id="data_item_img"></div>
+                <p>POCO Android Phone</p>
+                <p>From &#8377; <%= more_data[13].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Speaker">
+                <a href="/show/<%= more_data[32]._id%>">
+                <div class="img_data"><img src="<%= more_data[32].image %>" id="data_item_img"></div>
+                <p>Portronics Bluetooth Speaker</p>
+                <p>From &#8377; <%= more_data[32].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item TV">
+                <a href="/show/<%= more_data[27]._id%>">
+                <div class="img_data"><img src="<%= more_data[27].image %>" id="data_item_img"></div>
+                <p>Reliance Smart Android T.V</p>
+                <p>From &#8377; <%= more_data[27].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Watch">
+                <a href="/show/<%= more_data[19]._id%>">
+                <div class="img_data"><img src="<%= more_data[19].image %>" id="data_item_img"></div>
+                <p>Kids LED Watch</p>
+                <p>From &#8377; <%= more_data[27].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Laptop">
+                <a href="/show/<%= more_data[5]._id%>">
+                <div class="img_data"><img src="<%= more_data[5].image %>" id="data_item_img"></div>
+                <p>Apple MacBook</p>
+                <p>From &#8377; <%= more_data[5].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Phone">
+                <a href="/show/<%= more_data[61]._id%>">
+                <div class="img_data"><img src="<%= more_data[61].image %>" id="data_item_img"></div>
+                <p>Apple iPhone</p>
+                <p>From &#8377; <%= more_data[61].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Cooler">
+                <a href="/show/<%= more_data[52]._id%>">
+                <div class="img_data"><img src="<%= more_data[52].image %>" id="data_item_img"></div>
+                <p>Cooling Cooler</p>
+                <p>From &#8377; <%= more_data[52].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Headphone">
+                <a href="/show/<%= more_data[62]._id%>">
+                <div class="img_data"><img src="<%= more_data[62].image %>" id="data_item_img"></div>
+                <p>Zebronics Headphone </p>
+                <p>From &#8377; <%= more_data[62].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Washing">
+                <a href="/show/<%= more_data[57]._id%>">
+                <div class="img_data"><img src="<%= more_data[57].image %>" id="data_item_img"></div>
+                <p>Air Dry Washing Machine</p>
+                <p>From &#8377; <%= more_data[57].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Headphone">
+                <a href="/show/<%= more_data[63]._id%>">
+                <div class="img_data"><img src="<%= more_data[63].image %>" id="data_item_img"></div>
+                <p>OnePlus Earbuds</p>
+                <p>From &#8377; <%= more_data[63].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Computer">
+                <a href="/show/<%= more_data[64]._id%>">
+                <div class="img_data"><img src="<%= more_data[64].image %>" id="data_item_img"></div>
+                <p>Dell Comouter</p>
+                <p>From &#8377; <%= more_data[64].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Phone">
+                <a href="/show/<%= more_data[65]._id%>">
+                <div class="img_data"><img src="<%= more_data[65].image %>" id="data_item_img"></div>
+                <p>Nothing Phone</p>
+                <p>From &#8377; <%= more_data[65].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Laptop">
+                <a href="/show/<%= more_data[66]._id%>">
+                <div class="img_data"><img src="<%= more_data[66].image %>" id="data_item_img"></div>
+                <p>Sumsung Laptop</p>
+                <p>From &#8377; <%= more_data[66].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            
+            <div class="data_item Drone">
+                <a href="/show/<%= more_data[47]._id%>">
+                <div class="img_data"><img src="<%= more_data[47].image %>" id="data_item_img"></div>
+                <p>New Smart Drone & Cemeras</p>
+                <p>From &#8377; <%= more_data[47].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Cooler">
+                <a href="/show/<%= more_data[53]._id%>">
+                <div class="img_data"><img src="<%= more_data[53].image %>" id="data_item_img"></div>
+                <p>New Smart Cooler</p>
+                <p>From &#8377; <%= more_data[53].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Laptop">
+                <a href="/show/<%= more_data[67]._id%>">
+                <div class="img_data"><img src="<%= more_data[67].image %>" id="data_item_img"></div>
+                <p>Acer Laptop</p>
+                <p>From &#8377; <%= more_data[67].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Phone">
+                <a href="/show/<%= more_data[68]._id%>">
+                <div class="img_data"><img src="<%= more_data[68].image %>" id="data_item_img"></div>
+                <p>Vivo Phone</p>
+                <p>From &#8377; <%= more_data[68].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Computer">
+                <a href="/show/<%= more_data[69]._id%>">
+                <div class="img_data"><img src="<%= more_data[69].image %>" id="data_item_img"></div>
+                <p>HP Computer</p>
+                <p>From &#8377; <%= more_data[69].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Headphone">
+                <a href="/show/<%= more_data[70]._id%>">
+                <div class="img_data"><img src="<%= more_data[70].image %>" id="data_item_img"></div>
+                <p>Boat Ear Phone</p>
+                <p>From &#8377; <%= more_data[70].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Drone">
+                <a href="/show/<%= more_data[48]._id%>">
+                <div class="img_data"><img src="<%= more_data[48].image %>" id="data_item_img"></div>
+                <p>Air Fly Drone & Cemeras</p>
+                <p>From &#8377; <%= more_data[48].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item TV">
+                <a href="/show/<%= more_data[25]._id%>">
+                <div class="img_data"><img src="<%= more_data[25].image %>" id="data_item_img"></div>
+                <p>Sony Smart T.V</p>
+                <p>From &#8377; <%= more_data[25].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Washing">
+                <a href="/show/<%= more_data[58]._id%>">
+                <div class="img_data"><img src="<%= more_data[58].image %>" id="data_item_img"></div>
+                <p>Cloth Washing Machine</p>
+                <p>From &#8377; <%= more_data[58].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Phone">
+                <a href="/show/<%= more_data[71]._id%>">
+                <div class="img_data"><img src="<%= more_data[71].image %>" id="data_item_img"></div>
+                <p>iQOO Phone</p>
+                <p>From &#8377; <%= more_data[71].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Laptop">
+                <a href="/show/<%= more_data[72]._id%>">
+                <div class="img_data"><img src="<%= more_data[72].image %>" id="data_item_img"></div>
+                <p>HP Laptop Core i5</p>
+                <p>From &#8377; <%= more_data[72].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Computer">
+                <a href="/show/<%= more_data[73]._id%>">
+                <div class="img_data"><img src="<%= more_data[73].image %>" id="data_item_img"></div>
+                <p>Asus Computer </p>
+                <p>From &#8377; <%= more_data[73].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Headphone">
+                <a href="/show/<%= more_data[74]._id%>">
+                <div class="img_data"><img src="<%= more_data[74].image %>" id="data_item_img"></div>
+                <p>Zebronics Mac Headphone</p>
+                <p>From &#8377; <%= more_data[74].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Drone">
+                <a href="/show/<%= more_data[49]._id%>">
+                <div class="img_data"><img src="<%= more_data[49].image %>" id="data_item_img"></div>
+                <p>Drone & Cemeras</p>
+                <p>From &#8377; <%= more_data[49].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Cooler">
+                <a href="/show/<%= more_data[54]._id%>">
+                <div class="img_data"><img src="<%= more_data[54].image %>" id="data_item_img"></div>
+                <p>Bajaj Cooler</p>
+                <p>From &#8377; <%= more_data[54].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Tablet">
+                <a href="/show/<%= more_data[75]._id%>">
+                <div class="img_data"><img src="<%= more_data[75].image %>" id="data_item_img"></div>
+                <p>Samsung Tablet</p>
+                <p>From &#8377; <%= more_data[75].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Washing">
+                <a href="/show/<%= more_data[60]._id%>">
+                <div class="img_data"><img src="<%= more_data[60].image %>" id="data_item_img"></div>
+                <p>Thinq Washing Machine</p>
+                <p>From &#8377; <%= more_data[60].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Drone">
+                <a href="/show/<%= more_data[50]._id%>">
+                <div class="img_data"><img src="<%= more_data[50].image %>" id="data_item_img"></div>
+                <p>Smart Drone & Cemeras</p>
+                <p>From &#8377; <%= more_data[50].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Tablet">
+                <a href="/show/<%= more_data[76]._id%>">
+                <div class="img_data"><img src="<%= more_data[76].image %>" id="data_item_img"></div>
+                <p>New Tablet </p>
+                <p>From &#8377; <%= more_data[76].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item TV">
+                <a href="/show/<%= more_data[26]._id%>">
+                <div class="img_data"><img src="<%= more_data[26].image %>" id="data_item_img"></div>
+                <p>Acer Android T.V</p>
+                <p>From &#8377; <%= more_data[26].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Cooler">
+                <a href="/show/<%= more_data[55]._id%>">
+                <div class="img_data"><img src="<%= more_data[55].image %>" id="data_item_img"></div>
+                <p>Smart Cooler</p>
+                <p>From &#8377; <%= more_data[55].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Tablet">
+                <a href="/show/<%= more_data[77]._id%>">
+                <div class="img_data"><img src="<%= more_data[77].image %>" id="data_item_img"></div>
+                <p>New Smart Tablet</p>
+                <p>From &#8377; <%= more_data[77].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Headphone">
+                <a href="/show/<%= more_data[78]._id%>">
+                <div class="img_data"><img src="<%= more_data[78].image %>" id="data_item_img"></div>
+                <p>Boat Bluetooth Headphone</p>
+                <p>From &#8377; <%= more_data[78].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Computer">
+                <a href="/show/<%= more_data[79]._id%>">
+                <div class="img_data"><img src="<%= more_data[79].image %>" id="data_item_img"></div>
+                <p>Apple Computer</p>
+                <p>From &#8377; <%= more_data[79].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Tablet">
+                <a href="/show/<%= more_data[80]._id%>">
+                <div class="img_data"><img src="<%= more_data[80].image %>" id="data_item_img"></div>
+                <p>Redmi Tablet</p>
+                <p>From &#8377; <%= more_data[80].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Washing">
+                <a href="/show/<%= more_data[56]._id%>">
+                <div class="img_data"><img src="<%= more_data[56].image %>" id="data_item_img"></div>
+                <p>Washing Machine</p>
+                <p>From &#8377; <%= more_data[56].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Computer">
+                <a href="/show/<%= more_data[81]._id%>">
+                <div class="img_data"><img src="<%= more_data[81].image %>" id="data_item_img"></div>
+                <p>Acer Computer</p>
+                <p>From &#8377; <%= more_data[81].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Tablet">
+                <a href="/show/<%= more_data[82]._id%>">
+                <div class="img_data"><img src="<%= more_data[82].image %>" id="data_item_img"></div>
+                <p>Smart Tablet</p>
+                <p>From &#8377; <%= more_data[82].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="data_item Speaker">
+                <a href="/show/<%= more_data[30]._id%>">
+                <div class="img_data"><img src="<%= more_data[30].image %>" id="data_item_img"></div>
+                <p>Bluetooth Speaker</p>
+                <p>From &#8377; <%= more_data[30].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+ <!-- End of Body part -->
+
+<%- include("includes/footer.ejs") %><!-- Footer part -->

@@ -1,0 +1,879 @@
+
+<%- include("includes/header.ejs") %> <!-- Header part -->
+
+<!-- Slider code -->
+    <div class="slider">
+        <div class="slider-img">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" id="slider_img">
+                    <div class="carousel-item active">
+                        <img src="/Image/slider_imge/laptop.jpg" class="d-block w-100" alt="Loading Image" id="img_size1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/Image/slider_imge/phone.jpeg" class="d-block w-100" alt="Loading Image" id="img_size2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/Image/slider_imge/drone.jpg" class="d-block w-100" alt="Loading Image" id="img_size3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/Image/slider_imge/TV.jpg" class="d-block w-100" alt="Loading Image" id="img_size3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/Image/slider_imge/speaker.jpg" class="d-block w-100" alt="Loading Image" id="img_size3">
+                    </div>
+                </div>
+            </div>
+            <div class="shopbtn"><div class="para">
+                <p>Incredible Price</p>
+                <p>On All your </p>
+                <p>Favorite Items.</p>
+            </div><p id="get">Get more for less on selected brands</p>
+                <form action="/Shop_now">
+                    <button id="btn">Shop Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+<!--  Body part page  -->
+    <div class="contaitner">
+        <!------------------------  Support Delivery ----------------------------->
+        <div class="support">
+            <div class="sup">
+                <div class="l1"><i class="fa-solid fa-truck"></i></div>
+                <div class="p1">
+                    <p>Free Delivery</p>
+                    <p>To your Door</p>
+                </div>
+            </div>
+            <div class="sup">
+                <div class="l1"><i class="fa-solid fa-bag-shopping"></i></div>
+                <div class="p1">
+                    <p>Free Delivery</p>
+                    <p>To your Door</p>
+                </div>
+            </div>
+            <div class="sup">
+                <div class="l1"><i class="fa-solid fa-people-carry-box"></i></div>
+                <div class="p1">
+                    <p>Available for your</p>
+                    <p>Online support 27/7</p>
+                </div>
+            </div>
+            <div class="sup">
+                <div class="l1"><i class="fa-solid fa-store"></i></div>
+                <div class="p1">
+                    <p>Available for your</p>
+                    <p>Online support 24/7</p>
+                </div>
+            </div>
+        </div>
+    
+    <div class="banner">
+        <img src="/Image/banner_img/banner1.png" id="banner-img">
+    </div>    
+<!-- Cearting Card for product  -->
+
+        <div id="card">
+            <div id="seller">Best Sellers</div>
+            <div class="swiper">
+                <div class="slider-wrapper">
+                    <div class="swiper-wrapper">
+                        <div id="card-format" class="swiper-slide"><!--card start-->
+                            <div class="card-img">
+                                <a href="/<%= data_card[0]._id%>"><img src="<%= data_card[0].image %>" id="cardImg"></a>
+                            </div>
+                            <div class="card-detail"><br>
+                                <p class="title"><%= data_card[0].title %></p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>&nbsp; 25 <br>
+                                <p><samp id="rate_old">Rs.<%= data_card[0].old_price.toLocaleString("en-IE") %></samp><samp id="rate_new">Rs.<%= data_card[0].new_price.toLocaleString("en-IE") %></samp></p>
+                                <p id="t_rate"> you save Rs. 599 | Free Shipping</p>
+                                <p id="gst">Incl. GST (No hidden Charge)</p></a>
+                                <button type="button" class="btn btn-dark" id="button_1">Add To Cart</button>
+                                <a href="/<%= data_card[0]._id%>/payment"><button type="button" class="btn btn-outline-primary" id="button_2">Buy Now</button></a>                  
+                            </div>
+                        </div><!-- cart end -->
+
+                        <div id="card-format" class="swiper-slide"><!--card start-->
+                            <div class="card-img">
+                                <a href="/<%= data_card[1]._id%>"><img src="<%= data_card[1].image %>" id="cardImg"></a>
+                            </div>
+                            <div class="card-detail"><br>
+                                <p class="title"><%= data_card[1].title %></p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>&nbsp; 25 <br>
+                                <p><samp id="rate_old">Rs.<%= data_card[1].old_price.toLocaleString("en-IE") %></samp><samp id="rate_new">Rs.<%= data_card[1].new_price.toLocaleString("en-IE") %></samp></p>
+                                <p id="t_rate"> you save Rs. 599 | Free Shipping</p>
+                                <p id="gst">Incl. GST (No hidden Charge)</p></a>
+                                <button type="button" class="btn btn-dark" id="button_1">Add To Cart</button>
+                                <a href="/<%= data_card[1]._id%>/payment"><button type="button" class="btn btn-outline-primary" id="button_2">Buy Now</button></a> 
+                            </div>
+                        </div><!-- cart end -->
+
+                        <div id="card-format" class="swiper-slide"><!--card start-->
+                            <div class="card-img">
+                                <a href="/<%= data_card[2]._id%>"><img src="<%= data_card[2].image %>" id="cardImg"></a>
+                            </div>
+                            <div class="card-detail"><br>
+                                <p class="title"><%= data_card[2].title %></p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>&nbsp; 25 <br>
+                                <p><samp id="rate_old">Rs.<%= data_card[2].old_price.toLocaleString("en-IE") %></samp><samp id="rate_new">Rs.<%= data_card[2].new_price.toLocaleString("en-IE") %></samp></p>
+                                <p id="t_rate"> you save Rs. 599 | Free Shipping</p>
+                                <p id="gst">Incl. GST (No hidden Charge)</p></a>
+                                <button type="button" class="btn btn-dark" id="button_1">Add To Cart</button>
+                                <a href="/<%= data_card[2]._id%>/payment"><button type="button" class="btn btn-outline-primary" id="button_2">Buy Now</button></a> 
+                            </div>
+                        </div><!-- cart end -->
+
+                        <div id="card-format" class="swiper-slide"><!--card start-->
+                            <div class="card-img">
+                                <a href="/<%= data_card[3]._id%>"><img src="<%= data_card[3].image %>" id="cardImg"></a>
+                            </div>
+                            <div class="card-detail"><br>
+                                <p class="title"><%= data_card[3].title %></p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>&nbsp; 25 <br>
+                                <p><samp id="rate_old">Rs.<%= data_card[3].old_price.toLocaleString("en-IE") %></samp><samp id="rate_new">Rs.<%= data_card[3].new_price.toLocaleString("en-IE") %></samp></p>
+                                <p id="t_rate"> you save Rs. 599 | Free Shipping</p>
+                                <p id="gst">Incl. GST (No hidden Charge)</p></a>
+                                <button type="button" class="btn btn-dark" id="button_1">Add To Cart</button>
+                                <a href="/<%= data_card[3]._id%>/payment"><button type="button" class="btn btn-outline-primary" id="button_2">Buy Now</button></a> 
+                            </div>
+                        </div><!-- cart end -->
+
+                        <div id="card-format" class="swiper-slide"><!--card start-->
+                            <div class="card-img">
+                                <a href="/<%= data_card[4]._id%>"><img src="<%= data_card[4].image %>" id="cardImg"></a>
+                            </div>
+                            <div class="card-detail"><br>
+                                <p class="title"><%= data_card[4].title %></p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>&nbsp; 25 <br>
+                                <p><samp id="rate_old">Rs.<%= data_card[4].old_price.toLocaleString("en-IE") %></samp><samp id="rate_new">Rs.<%= data_card[4].new_price.toLocaleString("en-IE") %></samp></p>
+                                <p id="t_rate"> you save Rs. 599 | Free Shipping</p>
+                                <p id="gst">Incl. GST (No hidden Charge)</p></a>
+                                <button type="button" class="btn btn-dark" id="button_1">Add To Cart</button>
+                                <a href="/<%= data_card[4]._id%>/payment"><button type="button" class="btn btn-outline-primary" id="button_2">Buy Now</button></a> 
+                            </div>
+                        </div><!-- cart end -->
+
+                        <div id="card-format" class="swiper-slide"><!--card start-->
+                            <div class="card-img">
+                                <a href="/<%= data_card[5]._id%>"><img src="<%= data_card[5].image %>" id="cardImg"></a>
+                            </div>
+                            <div class="card-detail"><br>
+                                <p class="title"><%= data_card[5].title %></p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>&nbsp; 25 <br>
+                                <p><samp id="rate_old">Rs.<%= data_card[5].old_price.toLocaleString("en-IE") %></samp><samp id="rate_new">Rs.<%= data_card[5].new_price.toLocaleString("en-IE") %></samp></p>
+                                <p id="t_rate"> you save Rs. 599 | Free Shipping</p>
+                                <p id="gst">Incl. GST (No hidden Charge)</p></a>
+                                <button type="button" class="btn btn-dark" id="button_1">Add To Cart</button>
+                                <a href="/<%= data_card[5]._id%>/payment"><button type="button" class="btn btn-outline-primary" id="button_2">Buy Now</button></a> 
+                            </div>
+                        </div><!-- cart end -->
+
+                        <div id="card-format" class="swiper-slide"><!--card start-->
+                            <div class="card-img">
+                                <a href="/<%= data_card[6]._id%>"><img src="<%= data_card[6].image %>" id="cardImg"></a>
+                            </div>
+                            <div class="card-detail"><br>
+                                <p class="title"><%= data_card[6].title %></p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>&nbsp; 25 <br>
+                                <p><samp id="rate_old">Rs.<%= data_card[6].old_price.toLocaleString("en-IE") %></samp><samp id="rate_new">Rs.<%= data_card[6].new_price.toLocaleString("en-IE") %></samp></p>
+                                <p id="t_rate"> you save Rs. 599 | Free Shipping</p>
+                                <p id="gst">Incl. GST (No hidden Charge)</p></a>
+                                <button type="button" class="btn btn-dark" id="button_1">Add To Cart</button>
+                                <a href="/<%= data_card[6]._id%>/payment"><button type="button" class="btn btn-outline-primary" id="button_2">Buy Now</button></a>
+                            </div>
+                        </div><!-- cart end -->
+
+                        <div id="card-format" class="swiper-slide"><!--card start-->
+                            <div class="card-img">
+                                <a href="/<%= data_card[7]._id%>"><img src="<%= data_card[7].image %>" id="cardImg"></a>
+                            </div>
+                            <div class="card-detail"><br>
+                                <p class="title"><%= data_card[7].title %></p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>&nbsp; 25 <br>
+                                <p><samp id="rate_old">Rs.<%= data_card[7].old_price.toLocaleString("en-IE") %></samp><samp id="rate_new">Rs.<%= data_card[7].new_price.toLocaleString("en-IE") %></samp></p>
+                                <p id="t_rate"> you save Rs. 599 | Free Shipping</p>
+                                <p id="gst">Incl. GST (No hidden Charge)</p></a>
+                                <button type="button" class="btn btn-dark" id="button_1">Add To Cart</button>
+                                <a href="/<%= data_card[7]._id%>/payment"><button type="button" class="btn btn-outline-primary" id="button_2">Buy Now</button></a>
+                            </div>
+                        </div><!-- cart end -->
+
+                        <div id="card-format" class="swiper-slide"><!--card start-->
+                            <div class="card-img">
+                                <a href="/<%= data_card[8]._id%>"><img src="<%= data_card[8].image %>" id="cardImg"></a>
+                            </div>
+                            <div class="card-detail"><br>
+                                <p class="title"><%= data_card[8].title %></p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>&nbsp; 25 <br>
+                                <p><samp id="rate_old">Rs.<%= data_card[8].old_price.toLocaleString("en-IE") %></samp><samp id="rate_new">Rs.<%= data_card[8].new_price.toLocaleString("en-IE") %></samp></p>
+                                <p id="t_rate"> you save Rs. 599 | Free Shipping</p>
+                                <p id="gst">Incl. GST (No hidden Charge)</p></a>
+                                <button type="button" class="btn btn-dark" id="button_1">Add To Cart</button>
+                                <a href="/<%= data_card[8]._id%>/payment"><button type="button" class="btn btn-outline-primary" id="button_2">Buy Now</button></a>
+                            </div>
+                        </div><!-- cart end -->
+                    
+                        <div id="card-format" class="swiper-slide"><!--card start-->
+                            <div class="card-img">
+                                <a href="/<%= data_card[9]._id%>"><img src="<%= data_card[9].image %>" id="cardImg"></a>
+                            </div>
+                            <div class="card-detail"><br>
+                                <p class="title"><%= data_card[9].title %></p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>&nbsp; 25 <br>
+                                <p><samp id="rate_old">Rs.<%= data_card[9].old_price.toLocaleString("en-IE") %></samp><samp id="rate_new">Rs.<%= data_card[9].new_price.toLocaleString("en-IE") %></samp></p>
+                                <p id="t_rate"> you save Rs. 599 | Free Shipping</p>
+                                <p id="gst">Incl. GST (No hidden Charge)</p></a>
+                                <button type="button" class="btn btn-dark" id="button_1">Add To Cart</button>
+                                <a href="/<%= data_card[9]._id%>/payment"><button type="button" class="btn btn-outline-primary" id="button_2">Buy Now</button></a>
+                            </div>
+                        </div><!-- cart end -->
+
+                    </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev" id="button_slider_p"></div>
+                <div class="swiper-button-next" id="button_slider_n"></div>
+
+            </div><br>
+            <div id="view-all">
+                <form method="get" action="/Shop_now">
+                    <button id="view-btn">View All</button>
+                </form>
+            </div>
+        </div>
+<!--------------------- Shop By Category ------------------------------->
+    <div class="category">
+        <div id="seller">Shop by Category</div>
+        <div class="shop-category">
+                <div class="circle">
+                    <div><a href="/laptop_view"><img src="<%= more_data[35].image %>" id="circle-photo"></a></div>
+                    <div  class="text"><a href="#">Laptop</a></div>
+                </div>
+
+                <div class="circle">
+                    <div><a href="/mobile_view"><img src="<%= more_data[36].image %>" id="circle-photo"></a></div>
+                    <div class="text"><a href="#">Smart Phone</a></div>
+                </div>
+
+                <div class="circle">
+                    <div><a href="/drones_view"><img src="<%= more_data[37].image %>" id="circle-photo"></a></div>
+                    <div class="text"><a href="#">Drone</a></div>
+                </div>
+
+                <div class="circle">
+                    <div><a href="/tv_view"><img src="<%= more_data[38].image %>" id="circle-photo"></a></div>
+                    <div class="text"><a href="#">Android TV</a></div>
+                </div>
+
+                <div class="circle">
+                    <div><a href="/watch_view"><img src="<%= more_data[39].image %>" id="circle-photo"></a></div>
+                    <div class="text"><a href="#">Smart Watch</a></div>
+                </div>
+        </div>
+
+        <div class="shop-category">
+                <div class="circle">
+                    <div><a href="/Shop_now"><img src="<%= more_data[40].image %>" id="circle-photo"></a></div>
+                    <div  class="text"><a href="#">Bluetooth Speaker</a></div>
+                </div>
+
+                <div class="circle">
+                    <div><a href="/Shop_now"><img src="<%= more_data[41].image %>" id="circle-photo"></a></div>
+                    <div class="text"><a href="#">Washing Machine</a></div>
+                </div>
+
+                <div class="circle">
+                    <div><a href="/Shop_now"><img src="<%= more_data[42].image %>" id="circle-photo"></a></div>
+                    <div class="text"><a href="#">Freeze</a></div>
+                </div>
+
+                <div class="circle">
+                    <div><a href="/laptop_view"><img src="<%= more_data[43].image %>" id="circle-photo"></a></div>
+                    <div class="text"><a href="#">Computer</a></div>
+                </div>
+
+                <div class="circle">
+                    <div><a href="/Shop_now"><img src="<%= more_data[44].image %>" id="circle-photo"></a></div>
+                    <div class="text"><a href="#">Cooler</a></div>
+                </div>
+        </div>
+    </div>
+<!------ Banner 2 -->
+
+    <div class="banner2">
+        <img src="/Image/banner_img/banner_shop.png" id="banner-img2">
+    </div> 
+<!------------------------------------------------------------------------->
+<!-- Cearting Card  for On Sale product  -->
+
+        <div id="card">
+            <div id="seller">On Sale</div>
+            <div class="swiper">
+                <div class="slider-wrapper2">
+                    <div class="swiper-wrapper">
+
+                        <div id="card-format" class="swiper-slide"><!--card start-->
+                            <div class="card-img">
+                                <a href="/<%= data_card[10]._id%>"><img src="<%= data_card[10].image %>" id="cardImg"></a>
+                            </div>
+                            <div class="card-detail"><br>
+                                <p class="title"><%= data_card[10].title %></p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>&nbsp; 25 <br><br>
+                                <p><samp id="rate_old">Rs.<%= data_card[10].old_price.toLocaleString("en-IE") %></samp><samp id="rate_new">Rs.<%= data_card[10].new_price.toLocaleString("en-IE") %></samp></p>
+                                <p id="t_rate">you save Rs. 599 | Free Shipping</p>
+                                <p id="gst">Incl. GST Charge</p></a>
+                                <button type="button" class="btn btn-dark" id="button_1">Add To Cart</button>
+                                <a href="/<%= data_card[10]._id%>/payment"><button type="button" class="btn btn-outline-primary" id="button_2">Buy Now</button></a>
+                            </div>
+                        </div><!-- cart end -->
+
+                        <div id="card-format" class="swiper-slide"><!--card start-->
+                            <div class="card-img">
+                                <a href="/<%= data_card[11]._id%>"><img src="<%= data_card[11].image %>" id="cardImg"></a>
+                            </div>
+                            <div class="card-detail"><br>
+                                <p class="title"><%= data_card[11].title %></p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>&nbsp; 25 <br><br>
+                                <p><samp id="rate_old">Rs.<%= data_card[11].old_price.toLocaleString("en-IE") %></samp><samp id="rate_new">Rs.<%= data_card[11].new_price.toLocaleString("en-IE") %></samp></p>
+                                <p id="t_rate">you save Rs. 599 | Free Shipping</p>
+                                <p id="gst">Incl. GST Charge</p></a>
+                                <button type="button" class="btn btn-dark" id="button_1">Add To Cart</button>
+                                <a href="/<%= data_card[11]._id%>/payment"><button type="button" class="btn btn-outline-primary" id="button_2">Buy Now</button></a>
+                            </div>
+                        </div><!-- cart end -->
+
+                        <div id="card-format" class="swiper-slide"><!--card start-->
+                            <div class="card-img">
+                                <a href="/<%= data_card[12]._id%>"><img src="<%= data_card[12].image %>" id="cardImg"></a>
+                            </div>
+                            <div class="card-detail"><br>
+                                <p class="title"><%= data_card[12].title %></p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>&nbsp; 25 <br><br>
+                                <p><samp id="rate_old">Rs.<%= data_card[12].old_price.toLocaleString("en-IE") %></samp><samp id="rate_new">Rs.<%= data_card[12].new_price.toLocaleString("en-IE") %></samp></p>
+                                <p id="t_rate">you save Rs. 599 | Free Shipping</p>
+                                <p id="gst">Incl. GST Charge</p></a>
+                                <button type="button" class="btn btn-dark" id="button_1">Add To Cart</button>
+                                <a href="/<%= data_card[12]._id%>/payment"><button type="button" class="btn btn-outline-primary" id="button_2">Buy Now</button></a>
+                            </div>
+                        </div><!-- cart end -->
+
+                    <div id="card-format" class="swiper-slide"><!--card start-->
+                            <div class="card-img">
+                                <a href="/<%= data_card[13]._id%>"><img src="<%= data_card[13].image %>" id="cardImg"></a>
+                            </div>
+                            <div class="card-detail"><br>
+                                <p class="title"><%= data_card[13].title %></p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>&nbsp; 25 <br><br>
+                                <p><samp id="rate_old">Rs.<%= data_card[13].old_price.toLocaleString("en-IE") %></samp><samp id="rate_new">Rs.<%= data_card[13].new_price.toLocaleString("en-IE") %></samp></p>
+                                <p id="t_rate"> you save Rs. 599 | Free Shipping</p>
+                                <p id="gst">Incl. GST Charge</p></a>
+                                <button type="button" class="btn btn-dark" id="button_1">Add To Cart</button>
+                                <a href="/<%= data_card[13]._id%>/payment"><button type="button" class="btn btn-outline-primary" id="button_2">Buy Now</button></a>
+                            </div>
+                        </div><!-- cart end -->
+
+                    <div id="card-format" class="swiper-slide"><!--card start-->
+                            <div class="card-img">
+                                <a href="/<%= data_card[14]._id%>"><img src="<%= data_card[14].image %>" id="cardImg"></a>
+                            </div>
+                            <div class="card-detail"><br>
+                                <p class="title"><%= data_card[14].title %></p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>&nbsp; 25 <br><br>
+                                <p><samp id="rate_old">Rs.<%= data_card[14].old_price.toLocaleString("en-IE") %></samp><samp id="rate_new">Rs.<%= data_card[14].new_price.toLocaleString("en-IE") %></samp></p>
+                                <p id="t_rate"> you save Rs. 599 | Free Shipping</p>
+                                <p id="gst">Incl. GST Charge</p></a>
+                                <button type="button" class="btn btn-dark" id="button_1">Add To Cart</button>
+                                <a href="/<%= data_card[14]._id%>/payment"><button type="button" class="btn btn-outline-primary" id="button_2">Buy Now</button></a>
+                            </div>
+                        </div><!-- cart end -->
+
+                    <div id="card-format" class="swiper-slide"><!--card start-->
+                            <div class="card-img">
+                                <a href="/<%= data_card[15]._id%>"><img src="<%= data_card[15].image %>" id="cardImg"></a>
+                            </div>
+                            <div class="card-detail"><br>
+                                <p class="title"><%= data_card[15].title %></p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>&nbsp; 25 <br><br>
+                                <p><samp id="rate_old">Rs.<%= data_card[15].old_price.toLocaleString("en-IE") %></samp><samp id="rate_new">Rs.<%= data_card[15].new_price.toLocaleString("en-IE") %></samp></p>
+                                <p id="t_rate">you save Rs. 599 | Free Shipping</p>
+                                <p id="gst">Incl. GST Charge</p></a>
+                                <button type="button" class="btn btn-dark" id="button_1">Add To Cart</button>
+                                <a href="/<%= data_card[15]._id%>/payment"><button type="button" class="btn btn-outline-primary" id="button_2">Buy Now</button></a>
+                            </div>
+                        </div><!-- cart end -->
+
+                    <div id="card-format" class="swiper-slide"><!--card start-->
+                            <div class="card-img">
+                                <a href="/<%= data_card[16]._id%>"><img src="<%= data_card[16].image %>" id="cardImg"></a>
+                            </div>
+                            <div class="card-detail"><br>
+                                <p class="title"><%= data_card[16].title %></p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>&nbsp; 25 <br><br>
+                                <p><samp id="rate_old">Rs.<%= data_card[16].old_price.toLocaleString("en-IE") %></samp><samp id="rate_new">Rs.<%= data_card[16].new_price.toLocaleString("en-IE") %></samp></p>
+                                <p id="t_rate">you save Rs. 599 | Free Shipping</p>
+                                <p id="gst">Incl. GST Charge</p></a>
+                                <button type="button" class="btn btn-dark" id="button_1">Add To Cart</button>
+                                <a href="/<%= data_card[16]._id%>/payment"><button type="button" class="btn btn-outline-primary" id="button_2">Buy Now</button></a>
+                            </div>
+                        </div><!-- cart end -->
+
+                        <div id="card-format" class="swiper-slide"><!--card start-->
+                            <div class="card-img">
+                                <a href="/<%= data_card[17]._id%>"><img src="<%= data_card[17].image %>" id="cardImg"></a>
+                            </div>
+                            <div class="card-detail"><br>
+                                <p class="title"><%= data_card[17].title %></p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>&nbsp; 25 <br><br>
+                                <p><samp id="rate_old">Rs.<%= data_card[17].old_price.toLocaleString("en-IE") %></samp><samp id="rate_new">Rs.<%= data_card[17].new_price.toLocaleString("en-IE") %></samp></p>
+                                <p id="t_rate"> you save Rs. 599 | Free Shipping</p>
+                                <p id="gst">Incl. GST Charge</p></a>
+                                <button type="button" class="btn btn-dark" id="button_1">Add To Cart</button>
+                                <a href="/<%= data_card[17]._id%>/payment"><button type="button" class="btn btn-outline-primary" id="button_2">Buy Now</button></a>
+                            </div>
+                        </div><!-- cart end -->
+
+                    <div id="card-format" class="swiper-slide"><!--card start-->
+                            <div class="card-img">
+                                <a href="/<%= data_card[5]._id%>"><img src="<%= data_card[5].image %>" id="cardImg"></a>
+                            </div>
+                            <div class="card-detail"><br>
+                                <p class="title"><%= data_card[5].title %></p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>&nbsp; 25 <br><br>
+                                <p><samp id="rate_old">Rs.<%= data_card[5].old_price.toLocaleString("en-IE") %></samp><samp id="rate_new">Rs.<%= data_card[5].new_price.toLocaleString("en-IE") %></samp></p>
+                                <p id="t_rate">you save Rs. 599 | Free Shipping</p>
+                                <p id="gst">Incl. GST Charge</p></a>
+                                <button type="button" class="btn btn-dark" id="button_1">Add To Cart</button>
+                                <a href="/<%= data_card[5]._id%>/payment"><button type="button" class="btn btn-outline-primary" id="button_2">Buy Now</button></a>
+                            </div>
+                        </div><!-- cart end -->
+
+                        <div id="card-format" class="swiper-slide"><!--card start-->
+                            <div class="card-img">
+                                <a href="/<%= data_card[5]._id%>"><img src="<%= data_card[5].image %>" id="cardImg"></a>
+                            </div>
+                            <div class="card-detail"><br>
+                                <p class="title"><%= data_card[5].title %></p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>&nbsp; 25 <br><br>
+                                <p><samp id="rate_old">Rs.<%= data_card[5].old_price.toLocaleString("en-IE") %></samp><samp id="rate_new">Rs.<%= data_card[5].new_price.toLocaleString("en-IE") %></samp></p>
+                                <p id="t_rate">you save Rs. 599 | Free Shipping</p>
+                                <p id="gst">Incl. GST Charge</p></a>
+                                <button type="button" class="btn btn-dark" id="button_1">Add To Cart</button>
+                                <a href="/<%= data_card[5]._id%>/payment"><button type="button" class="btn btn-outline-primary" id="button_2">Buy Now</button></a>
+                            </div>
+                        </div><!-- cart end -->
+
+                        <div id="card-format" class="swiper-slide"><!--card start-->
+                            <div class="card-img">
+                                <a href="/<%= data_card[7]._id%>"><img src="<%= data_card[7].image %>" id="cardImg"></a>
+                            </div>
+                            <div class="card-detail"><br>
+                                <p class="title"><%= data_card[7].title %></p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>&nbsp; 25 <br><br>
+                                <p><samp id="rate_old">Rs.<%= data_card[7].old_price.toLocaleString("en-IE") %></samp><samp id="rate_new">Rs.<%= data_card[7].new_price.toLocaleString("en-IE") %></samp></p>
+                                <p id="t_rate">you save Rs. 599 | Free Shipping</p>
+                                <p id="gst">Incl. GST Charge</p></a>
+                                <button type="button" class="btn btn-dark" id="button_1">Add To Cart</button>
+                                <a href="/<%= data_card[7]._id%>/payment"><button type="button" class="btn btn-outline-primary" id="button_2">Buy Now</button></a>
+                            </div>
+                        </div><!-- cart end -->
+                </div>
+                </div>
+
+            </div><br>
+            <div id="view-all">
+                <form method="get" action="/Shop_now">
+                    <button id="view-btn">View All</button>
+                </form>
+            </div>
+        </div><br>
+<!----------------------------- end on sale cards ----------------------->
+
+<!-------------------------------- Brands Name -------------------------------------->
+
+   <div class="brands">
+        <div id="seller">Brands</div>
+        <div class="brand-box">
+            <div class="bbox"><img src="/Image/brand_logo_img/brand_dell_logo.jpg" id="brand-image"></div>
+            <div class="bbox"><img src="/Image/brand_logo_img/brand_samsung_logo.jpg" id="brand-image"></div>
+            <div class="bbox"><img src="/Image/brand_logo_img/brand_boat_logo.png" id="brand-image"></div>
+            <div class="bbox"><img src="/Image/brand_logo_img/brand_noise_logo.jpg" id="brand-image"></div>
+            <div class="bbox"><img src="/Image/brand_logo_img/brand_Vivo-Logo.png" id="brand-image"></div>
+            <div class="bbox"><img src="/Image/brand_logo_img/brand_apple_logo.png" id="brand-image"></div>
+            <div class="bbox"><img src="/Image/brand_logo_img/brand_lg_logo.jpg" id="brand-image"></div>
+        </div>
+   </div>
+
+   <!------ Banner 3 -->
+   <br>
+    <div class="banner2">
+        <img src="/Image/banner_img/banner_3.png" id="banner-img2">
+    </div> 
+<!-------------------- Morer Products -------------------->
+   <div class="more_product"> <!-- product Row:1-->
+        <div class="product_title"><h4>Best Laptop</h4></div>
+        <div class="product_1" id="product_1" tabindex="-1">
+            <div class="sub_product">
+                <a href="/show/<%= more_data[0]._id%>">
+                    <img src="<%= more_data[0].image %>" id="product_img">
+                    <p id="product_name"><%= more_data[0].title %></p>
+                    <p id="product_price">From &#8377;<%= more_data[0].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="sub_product">
+                <a href="/show/<%= more_data[1]._id%>">
+                    <img src="<%= more_data[1].image %>" id="product_img">
+                    <p id="product_name"><%= more_data[1].title %></p>
+                    <p id="product_price">From &#8377;<%= more_data[1].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[2]._id%>">
+                    <img src="<%= more_data[2].image %>" id="product_img">
+                    <p id="product_name"><%= more_data[2].title %></p>
+                    <p id="product_price">From &#8377;<%= more_data[2].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[3]._id%>">
+                    <img src="<%= more_data[3].image %>" id="product_img">
+                    <p id="product_name"><%= more_data[3].title %></p>
+                    <p id="product_price">From &#8377;<%= more_data[3].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[4]._id%>">
+                    <img src="<%= more_data[4].image %>" id="product_img">
+                    <p id="product_name"><%= more_data[4].title %></p>
+                    <p id="product_price">From &#8377;<%= more_data[4].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[5]._id%>">
+                    <img src="<%= more_data[5].image %>" id="product_img">
+                    <p id="product_name"><%= more_data[5].title %></p>
+                    <p id="product_price">From &#8377;<%= more_data[5].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[6]._id%>">
+                    <img src="<%= more_data[6].image %>" id="product_img">
+                    <p id="product_name"><%= more_data[6].title %></p>
+                    <p id="product_price">From &#8377;<%= more_data[6].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+        </div>
+   </div>
+
+   <div class="more_product">  <!-- product Row:2-->
+        <div class="product_title"><h4>Best Mobile Phone</h4></div>
+        <div class="product_1" id="product_2" tabindex="-1">
+            <div class="sub_product">
+                <a href="/show/<%= more_data[7]._id%>">
+                    <img src="<%= more_data[7].image %>" id="product_img2">
+                    <p id="product_name"><%= more_data[7].title %></p>
+                    <p id="product_price">From &#8377;<%= more_data[7].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="sub_product">
+                <a href="/show/<%= more_data[8]._id%>">
+                    <img src="<%= more_data[8].image %>" id="product_img2">
+                    <p id="product_name"><%= more_data[8].title %></p>
+                    <p id="product_price">From &#8377;<%= more_data[8].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[9]._id%>">
+                    <img src="<%= more_data[9].image %>" id="product_img2">
+                    <p id="product_name"><%= more_data[9].title %></p>
+                    <p id="product_price">From &#8377;<%= more_data[9].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[10]._id%>">
+                    <img src="<%= more_data[10].image %>" id="product_img2">
+                    <p id="product_name"><%= more_data[10].title %></p>
+                    <p id="product_price">From &#8377;<%= more_data[10].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[11]._id%>">
+                    <img src="<%= more_data[11].image %>" id="product_img2">
+                    <p id="product_name"><%= more_data[11].title %></p>
+                    <p id="product_price">From &#8377;<%= more_data[11].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[12]._id%>">
+                    <img src="<%= more_data[12].image %>" id="product_img2">
+                    <p id="product_name"><%= more_data[12].title %></p>
+                    <p id="product_price">From &#8377;<%= more_data[12].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[13]._id%>">
+                    <img src="<%= more_data[13].image %>" id="product_img2">
+                    <p id="product_name"><%= more_data[13].title %></p>
+                    <p id="product_price">From &#8377;<%= more_data[13].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+        </div>
+   </div>
+
+   <div class="more_product">  <!-- product Row:3-->
+        <div class="product_title"><h4>Best Smart Watch</h4></div>
+        <div class="product_1" id="product_3" tabindex="-1">
+            <div class="sub_product">
+                <a href="/show/<%= more_data[14]._id%>">
+                    <img src="<%= more_data[14].image %>" id="product_img2">
+                    <p id="product_name"><%= more_data[14].title %></p>
+                    <p id="product_price">From &#8377;<%= more_data[14].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="sub_product">
+                <a href="/show/<%= more_data[15]._id%>">
+                    <img src="<%= more_data[15].image %>" id="product_img2">
+                    <p id="product_name"><%= more_data[15].title %></p>
+                    <p id="product_price">From &#8377;<%= more_data[15].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[16]._id%>">
+                    <img src="<%= more_data[16].image %>" id="product_img2">
+                    <p id="product_name"><%= more_data[16].title %></p>
+                    <p id="product_price">From &#8377;<%= more_data[16].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[17]._id%>">
+                    <img src="<%= more_data[17].image %>" id="product_img2">
+                    <p id="product_name"><%= more_data[17].title %></p>
+                    <p id="product_price">From &#8377;<%= more_data[17].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[18]._id%>">
+                    <img src="<%= more_data[18].image %>" id="product_img2">
+                    <p id="product_name"><%= more_data[18].title %></p>
+                    <p id="product_price">From &#8377;<%= more_data[18].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[19]._id%>">
+                    <img src="<%= more_data[19].image %>" id="product_img2">
+                    <p id="product_name"><%= more_data[19].title %></p>
+                    <p id="product_price">From &#8377;<%= more_data[19].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[20]._id%>">
+                    <img src="<%= more_data[20].image %>" id="product_img2">
+                    <p id="product_name"><%= more_data[20].title %></p>
+                    <p id="product_price">From &#8377;<%= more_data[20].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+        </div>
+   </div>
+
+
+   <div class="more_product">  <!-- product Row:4-->
+        <div class="product_title"><h4>Best Android T.V</h4></div>
+        <div class="product_1" id="product_4" tabindex="-1">
+            <div class="sub_product">
+                <a href="/show/<%= more_data[21]._id%>">
+                    <img src="<%= more_data[21].image %>" id="product_img">
+                    <p id="product_name">Samtonic Android TV </p>
+                    <p id="product_price">From &#8377;<%= more_data[21].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="sub_product">
+                <a href="/show/<%= more_data[22]._id%>">
+                    <img src="<%= more_data[22].image %>" id="product_img">
+                    <p id="product_name">Samsung Smart TV</p>
+                    <p id="product_price">From &#8377;<%= more_data[22].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[23]._id%>">
+                    <img src="<%= more_data[23].image %>" id="product_img">
+                    <p id="product_name">Mi Smart Android TV</p>
+                    <p id="product_price">From &#8377;<%= more_data[23].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[24]._id%>">
+                    <img src="<%= more_data[24].image %>" id="product_img">
+                    <p id="product_name">LG Smart TV</p>
+                    <p id="product_price">From &#8377;<%= more_data[24].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[25]._id%>">
+                    <img src="<%= more_data[25].image %>" id="product_img">
+                    <p id="product_name">Sony Android TV</p>
+                    <p id="product_price">From &#8377;<%= more_data[25].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[26]._id%>">
+                    <img src="<%= more_data[26].image %>" id="product_img">
+                    <p id="product_name">Acer Smart TV</p>
+                    <p id="product_price">From &#8377;<%= more_data[26].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[27]._id%>">
+                    <img src="<%= more_data[27].image %>" id="product_img">
+                    <p id="product_name">Reliance Smart TV</p>
+                    <p id="product_price">From &#8377;<%= more_data[27].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+        </div>
+   </div>
+
+   <div class="more_product">  <!-- product Row:5-->
+        <div class="product_title"><h4>Best Bluetooth Speaker</h4></div>
+        <div class="product_1" id="product_5" tabindex="-1">
+            <div class="sub_product">
+                <a href="/show/<%= more_data[28]._id%>">
+                    <img src="<%= more_data[28].image %>" id="product_img2">
+                    <p id="product_name">Boat Speaker</p>
+                    <p id="product_price">From &#8377;<%= more_data[27].new_price.toLocaleString("en-IE") %></p>
+                </a>
+            </div>
+
+            <div class="sub_product">
+                <a href="/show/<%= more_data[29]._id%>">
+                    <img src="<%= more_data[29].image %>" id="product_img2">
+                    <p id="product_name">JBL Bluetooth Speaker</p>
+                    <p id="product_price">From &#8377;1,100</p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[30]._id%>">
+                    <img src="<%= more_data[30].image %>" id="product_img2">
+                    <p id="product_name">Zebronics Speaker</p>
+                    <p id="product_price">From &#8377;1,599</p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[31]._id%>">
+                    <img src="<%= more_data[31].image %>" id="product_img2">
+                    <p id="product_name">Mi Speaker</p>
+                    <p id="product_price">From &#8377;2,099</p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[32]._id%>">
+                    <img src="<%= more_data[32].image %>" id="product_img2">
+                    <p id="product_name">Portronics Speaker</p>
+                    <p id="product_price">From &#8377;880</p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[33]._id%>">
+                    <img src="<%= more_data[33].image %>" id="product_img2">
+                    <p id="product_name">MIVI Speaker</p>
+                    <p id="product_price">From &#8377;1,799</p>
+                </a>
+            </div>
+            <div class="sub_product">
+                <a href="/show/<%= more_data[34]._id%>">
+                    <img src="<%= more_data[34].image %>" id="product_img2">
+                    <p id="product_name">Portronics Speaker</p>
+                    <p id="product_price">From &#8377;980</p>
+                </a>
+            </div>
+        </div>
+   </div>
+
+</div>
+
+<%- include("includes/footer.ejs") %><!-- Footer part -->
