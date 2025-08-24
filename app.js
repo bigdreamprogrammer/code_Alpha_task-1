@@ -15,7 +15,7 @@ app.use(express.urlencoded({extended:true}));
 
 app.get('/favicon.ico', (req, res) => res.status(204));
 
-const dbUrl = process.env.URL;
+const dbUrl = 'mongodb+srv://Dream:dream8485@electronics.ec4mpyu.mongodb.net/?retryWrites=true&w=majority&appName=Electronics';
 
 var sess = {
   secret: "big dream programmer",
