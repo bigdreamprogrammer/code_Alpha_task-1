@@ -18,7 +18,7 @@ app.get('/favicon.ico', (req, res) => res.status(204));
 const dbUrl = process.env.URL;
 
 var sess = {
-  secret: process.env.SECRET,
+  secret: "big dream programmer",
   cookie: {}
 }
 
