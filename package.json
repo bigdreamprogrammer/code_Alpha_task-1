@@ -1,5 +1,5 @@
 {  "engines":{
-    "node": "v22.18.0."
+    "node": "v22.18.0"
   },
   "name": "new_project",
   "version": "1.0.0",
